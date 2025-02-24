@@ -1,0 +1,421 @@
+:root {
+    --heading-color: #ffffff;
+    --text-color: #C7C7C7;
+    --btn-color: #D3E97A;
+    --bg-color: #0A0A0A;
+    --border-color: #484848;
+    --primary-font: "Bebas Neue";
+    --secondary-font: "Manrope";
+    --conrner-radius: 12px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+    font-family: var(--secondary-font);
+    font-size: 18px;
+}
+
+/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
+
+a {
+    text-decoration: none;
+}
+hr {
+    background-color: #2b2a2a;
+    height: 2px;
+    width: 100%;
+}
+
+nav {
+    background-color: var(--bg-color);
+    padding: 24px 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-family: var(--primary-font);
+    font-size: 32px;
+}
+
+nav .mobile-menu {
+    display: none;
+}
+
+nav .desktop-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+nav .desktop-menu li {
+    list-style-type: none;
+}
+
+nav a {
+    font-size: 16px;
+}
+
+@media screen and (max-width:768px) {
+    nav .desktop-menu {
+        display: none;
+    }
+
+    nav .mobile-menu {
+        display: block;
+        background-color: transparent;
+        border: none;
+    }
+
+    nav {
+        padding: 24px 16px;
+    }
+}
+
+/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
+
+header {
+    background-color: var(--bg-color);
+    padding: 24px 60px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+header h1 {
+    text-transform: uppercase;
+    color: var(--heading-color);
+    font-size: 60px;
+}
+
+header p {
+    margin: 15px 20px 15px 0;
+    font-size: 23px;
+}
+
+header img {
+    max-width: 100%;
+    width: 350px;
+    height: auto;
+}
+
+.contact button {
+    background-color: var(--btn-color);
+    border-radius: 12px;
+    width: 150px;
+    color: rgb(56, 54, 54);
+    border: none;
+}
+
+.contact button a {
+    color: black;
+}
+
+.contact span .il,
+.contact span .github {
+    margin-left: 16px;
+}
+
+@media screen and (max-width:768px) {
+    header {
+        flex-direction: column;
+        padding: 24px 20px;
+        align-items: flex-start; /*căn các phần tử về bên trái  */
+    }
+    .contact {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+    }
+    .contact span .il,
+    .contact span .github {
+        margin-left: 0px;
+    }
+    img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin-left: 0;
+    }
+}
+
+/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
+
+article {
+    background-color: var(--bg-color);
+    padding: 24px 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+article h2,
+article h3 {
+    color: var(--heading-color);
+}
+article p{
+    margin: 8px 15px 30px 0;
+}
+
+article .member{
+    display: flex;
+}
+article .member img {
+    margin-right: 50px;
+    width: 500px;
+    height: auto;
+}
+article .year {
+    margin-top: 35px;
+}
+article .year p {
+    margin: 15px 0;
+}
+article .role p {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+article .live {
+    margin-top: 15px;
+}
+article .live a {
+   border-bottom: 2px solid #D3E97A;
+   margin-right: 15px;
+}
+article .live i {
+    font-size: 15px;
+    color: #D3E97A;
+}
+@media screen and (max-width:768px){
+    article {
+        padding: 24px 20px;
+        align-items: flex-start;
+    }
+    article .member {
+        flex-direction: column;
+        width: 100%;
+    }
+    article .member img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto 20px auto;
+    }
+    article .live {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+/*aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+
+section {
+    background-color: var(--bg-color);
+    padding: 24px 60px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+section .content {
+    margin-right: 50px;
+    background-color: #1a1a1a;
+    width: 700px;
+    height: 480px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+section button {
+    position: absolute;
+    top: 16px;
+    left: 8px;
+    border-radius: 12px;
+    width: 120px;
+    background-color: var(--bg-color);
+    border: none;
+}
+section .container img {
+    width: 420px;
+    border-radius: 12px;
+}
+section .container {
+    display: flex;
+}
+section .col h3 {
+    margin: 35px 0 15px 0;
+}
+section .col p {
+    margin: 15px 0;
+}
+section .front p {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+section .see {
+    margin-top: 15px;
+}
+section .see a {
+    border-bottom: 2px solid #D3E97A;
+    margin-right: 15px;
+ }
+
+section .see i {
+     font-size: 15px;
+     color: #D3E97A;
+}
+@media screen and (max-width:768px){
+    section {
+        padding: 24px 20px;
+        align-items: flex-start;
+    }
+    section .container {
+        flex-direction: column;
+        width: 100%;
+    }
+    section .container img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        margin: 0 auto 20px auto;
+    }
+    section .see {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    section .content {
+        margin-right: 50px;
+        background-color: #1a1a1a;
+        width: 295px;
+        height: 280px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+}
+/*aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+
+aside {
+    background-color: var(--bg-color);
+    padding: 24px 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+aside h2,
+aside h3 {
+    color: var(--heading-color);
+}
+aside p{
+    margin: 8px 15px 30px 0;
+}
+
+aside .member{
+    display: flex;
+}
+aside .member img {
+    margin-right: 50px;
+    width: 500px;
+    height: auto;
+}
+aside .year {
+    margin-top: 35px;
+}
+aside .year p {
+    margin: 15px 0;
+}
+aside .role p {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+aside .live {
+    margin-top: 15px;
+}
+aside .live a {
+   border-bottom: 2px solid #D3E97A;
+   margin-right: 15px;
+}
+aside .live i {
+    font-size: 15px;
+    color: #D3E97A;
+}
+@media screen and (max-width:768px){
+    aside {
+        padding: 24px 20px;
+        align-items: flex-start;
+    }
+    aside .member {
+        flex-direction: column;
+        width: 100%;
+    }
+    aside .member img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto 20px auto;
+    }
+    aside .live {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+/*aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+
+.about {
+    background-color: var(--bg-color);
+    padding: 24px 60px;
+    display: flex;
+}
+.about h1 {
+    font-size: 50px;
+    color: var(--heading-color);
+    margin-right: 200px;
+    white-space: nowrap;
+    display: inline-block;
+}
+.about h3 {
+    font-size: 25px;
+    color: var(--heading-color);
+    margin-bottom: 15px;
+}
+.about p {
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+.about a {
+    color: var(--text-color);
+    border-bottom: 2px solid #D3E97A;
+    font-size: 12px;
+    margin-bottom: 150px;
+}
+@media screen and (max-width:768px) {
+    .about{
+        padding: 24px 20px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .about h1 {
+        font-size: 35px;
+    }
+    .about h3{
+        font-size: 15px;
+    }
+    .about p {
+        font-size: 13px;
+    }
+}
+
+/*aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+
